@@ -881,3 +881,36 @@ int main()
 2.
 a.内置类型成员都有缺省值，且初始化符合我们的要求
 b.全是自定义类型的构造，且这些类型都定义为默认构造
+
+//-------------------------------------------------------------------------------------
+//结构体和类都可以用构造函数，析构函数
+struct TreeNode
+{
+    TreeNode* _left;
+    TreeNode* _right;
+    int _val;
+
+    TreeNode(int val = 0)
+    {
+        _left = nullptr;
+        _right = nullptr;
+        _val = val;
+    }
+};
+
+int main() {
+    TreeNode n0;
+    TreeNode n1(1);
+    TreeNode n2(2);
+}
+/*
+n1 和 n2 是 TreeNode 类型的实例，它们通过构造函数初始化。
+构造函数 TreeNode(int val = 0) 允许创建一个带有特定值的树节点，并将左右子节点初始化为 nullptr（即没有子节点）。
+
+TreeNode n0; 创建了一个值为 0 的树节点，其左右子节点都为 nullptr。
+TreeNode n1(1); 创建了一个值为 1 的树节点，其左右子节点都为 nullptr。
+TreeNode n2(2); 创建了一个值为 2 的树节点，其左右子节点都为 nullptr。
+
+这种写法是 C++ 中对象初始化的常见方式，允许在创建对象时直接设置其属性值。
+在这个例子中，通过传递一个整数值给构造函数，可以设置树节点的 _val 成员变量。
+*/

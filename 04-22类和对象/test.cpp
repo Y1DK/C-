@@ -892,6 +892,8 @@ struct TreeNode
 
     TreeNode(int val = 0)
     {
+	//这里面int val = 0;我们不给才会用这个，例如：TreeNode n0;
+	//给了就不用这个0了，例如：TreeNode n1(1);TreeNode n2(2); 
         _left = nullptr;
         _right = nullptr;
         _val = val;

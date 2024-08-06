@@ -285,7 +285,7 @@ private:
 1.析构两次，报错
 2.一个函数修改会影响另一个函数
 
-1.Data和MyQueue都不需要写
+1.Data和MyQueue都不需要写。因为MyQueue里面会调用Stack，而Stack需要自己实现。Stack的实现和MyQueue无关。
 2.Stack需要自己实现
 */
 //class Stack
